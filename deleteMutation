@@ -1,0 +1,13 @@
+import { useMutation, useQueryClient } from "react-query";
+
+const UserTable = () => {
+  const deleteMutation = useMutation(
+    (id) => axios.delete(`http://localhost:3004/users/${id}`),
+    {
+      onSuccess: () => {
+        queryClient.invalidateQueries();
+      },
+      // ...
+    }
+  );
+};
