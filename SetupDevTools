@@ -1,0 +1,10 @@
+import { ReactQueryDevtools } from "react-query/devtools";
+
+function App() {
+  return (
+    <QueryClientProvider client={queryClient}>
+      {/* The rest of your application */}
+      <ReactQueryDevtools initialIsOpen={false} />
+    </QueryClientProvider>
+  );
+}
